@@ -66,3 +66,30 @@ Authorization: Bearer {{auth_token}}
   "quantity": 3,
   "price": 10000
 }
+
+### actuactor 모니터링 도구 테스트
+
+### health check
+GET http://localhost:8000/api/v1/user-service/actuator/health
+#{
+#"status" : up
+#}
+
+### metrics  항목 조회
+GET http://localhost:8000/api/v1/user-service/actuator/metrics
+
+### bean  항목 조회
+GET http://localhost:8000/api/v1/user-service/actuator/beans
+
+### httpexchanges  항목 조회
+GET http://localhost:8000/api/v1/user-service/actuator/httpexchanges
+
+### process.cpu.usage
+GET http://localhost:8000/api/v1/user-service/actuator/metrics/process.cpu.usage
+
+
+#### jvm.memory.min
+#GET http://localhost:8000/api/v1/user-service/actuator/metrics/jvm.memory.min
+
+### jvm.memory.max
+GET http://localhost:8000/api/v1/user-service/actuator/metrics/jvm.memory.max

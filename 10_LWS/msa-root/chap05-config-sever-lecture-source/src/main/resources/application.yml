@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-sever
+  cloud:
+    config:
+      server:
+        git: # git로 관리되는 폴더 내 설정 파일을 읽어옴(commit 상태여야 함)
+#          uri: C:\SWCAMP22\10_msa\10_LWS\msa-root\config
+#        github private repository 연결
+          uri: https://github.com/LimRaynor/config-server-test.git
+          username: LimRaynor
+          password: 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
+          default-label: main
+          # 무조건 절대경로, 해당디렉토리 yml과 properties를 가져온다
