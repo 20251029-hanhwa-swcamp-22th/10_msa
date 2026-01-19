@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git: # git으로 관리되는 폴더 내 설정 파일을 읽어옴(commit 상태여야 함)
+          #uri: /Users/gangseonghun/Desktop/SWCAMP22/10_msa/01_KangSungHun/msa-root/config
+
+
+          # github private repository 연결
+          uri: https://github.com/zkfmak9257/config-server-test.git
+          username: zkfmak9257
+          password: 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
+          default-label: main
