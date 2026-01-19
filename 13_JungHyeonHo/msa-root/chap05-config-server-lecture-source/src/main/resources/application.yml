@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git: # git으로 관리되는 폴더 내 설정 파일을 읽어옴(commit 상태여야 함), 로컬 깃 레포지토리
+#          uri: C:\JHH_project\22SWCAMP\10_msa\13_JungHyeonHo\msa-root\config
+          # 절대경로여야 되고, 해당 디렉터리의 yml과 properties를 가져옴
+
+          # github private repository
+          uri: https://github.com/gusgh075/config-server-test.git
+          username: gusgh075
+          password: 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
+          default-label: main # mainbranch를 읽겠다
