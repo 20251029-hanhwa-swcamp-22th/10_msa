@@ -67,3 +67,23 @@ Authorization: Bearer {{auth_token}}
   "price": 10000
 }
 
+### health
+GET localhost:8000/api/v1/user-service/actuator/health
+#{
+#  "status": "UP"
+#}
+
+### metrics 항목 조회
+GET localhost:8000/api/v1/user-service/actuator/metrics
+
+### process.cpu.usage
+GET localhost:8000/api/v1/user-service/actuator/metrics/process.cpu.usage
+
+### jvm.memory.max
+GET localhost:8000/api/v1/user-service/actuator/metrics/jvm.memory.max
+
+### beans
+GET localhost:8000/api/v1/user-service/actuator/beans
+
+### httpexchanges
+GET localhost:8000/api/v1/user-service/actuator/httpexchanges

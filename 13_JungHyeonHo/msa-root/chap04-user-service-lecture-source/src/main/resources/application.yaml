@@ -41,3 +41,10 @@ mybatis:
 #  secret: LH9QZL8upsPBfuDY+Dkb1kT9DZIIUSuA2u4O6Lfi3mkEfeWtETpVTcR/8SMZdJWn/xNTuCQBE6rBvDXgnVmscQ==
 #  expiration: 1800000
 #  refresh-expiration: 604800000
+
+# 엔드포인트의 노출 여부 제어
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, beans, httpexchanges
